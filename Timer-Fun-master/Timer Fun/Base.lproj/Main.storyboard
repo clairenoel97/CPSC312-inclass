@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I1X-AX-cfp">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stopwatch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="ZPr-U9-ffS">
+                                <rect key="frame" x="77.666666666666686" y="380" width="259" height="136.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-KM-AYq">
+                                        <rect key="frame" x="124.33333333333333" y="0.0" width="10.333333333333329" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="IBv-Rv-mqK">
+                                        <rect key="frame" x="0.0" y="106.33333333333331" width="259" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-ry-vVD">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6k-2a-HiB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbd-MS-uzO">
+                                                <rect key="frame" x="105.99999999999999" y="0.0" width="42.000000000000014" height="30"/>
+                                                <state key="normal" title="Pause"/>
+                                                <connections>
+                                                    <action selector="pausePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chz-Ou-2DH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2Z-OM-06h">
+                                                <rect key="frame" x="220" y="0.0" width="39" height="30"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uvx-ZZ-6pW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZPr-U9-ffS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BeI-bY-ae6"/>
+                            <constraint firstItem="ZPr-U9-ffS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azb-75-wmw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" id="qdh-GQ-FgE"/>
+                    <connections>
+                        <outlet property="secondsLabel" destination="eHw-KM-AYq" id="4lw-08-eHN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="26.116071428571427"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="42E-tr-Cxm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I1X-AX-cfp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zBn-iq-3jY">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IvF-cB-gLh"/>
+                        <segue destination="Iuy-6U-812" kind="relationship" relationship="viewControllers" id="c8v-Ze-N8R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZ9-bR-Pi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="26.116071428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eGs-Jg-Apq">
+            <objects>
+                <viewController id="Iuy-6U-812" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0aE-cN-jtC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SkM-GE-tU8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="G0u-QF-4Wd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9Y-ZQ-MF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="731"/>
+        </scene>
+    </scenes>
+</document>

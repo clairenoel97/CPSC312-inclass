@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cyo-V4-32s">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In Page-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="Multiple_View_Controllers_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bde-5D-Pdd">
+                                <rect key="frame" x="16" y="278.5" width="343" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-Ji-S4V">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-me-Ycy">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <segue destination="elL-jc-WP7" kind="show" identifier="automaticSegue" id="6qv-9T-dp7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56e-CM-Xao">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                        <state key="normal" title="Manual Segue Log In"/>
+                                        <connections>
+                                            <action selector="manualSegueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eIm-03-LEg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bde-5D-Pdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3zp-xw-CHS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bde-5D-Pdd" secondAttribute="trailing" constant="16" id="vCC-hE-n0p"/>
+                            <constraint firstItem="Bde-5D-Pdd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w9x-Is-GwI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log In Page" id="r6P-L3-mH9"/>
+                    <connections>
+                        <outlet property="usernameTextField" destination="9e4-Ji-S4V" id="ByT-DS-fgL"/>
+                        <segue destination="elL-jc-WP7" kind="show" identifier="manualSegue" id="T9T-J2-u1a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511.19999999999999" y="-63.418290854572717"/>
+        </scene>
+        <!--Welcome Page-->
+        <scene sceneID="IKF-bN-1lr">
+            <objects>
+                <viewController id="elL-jc-WP7" customClass="SecondViewController" customModule="Multiple_View_Controllers_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vGz-9t-i6v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i5V-Cs-nrJ">
+                                <rect key="frame" x="16" y="283.5" width="343" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, &lt;username&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-w0-Ap9">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tk0-vx-CER">
+                                        <rect key="frame" x="0.0" y="30.5" width="343" height="30"/>
+                                        <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <segue destination="L6e-jP-Ahh" kind="unwind" unwindAction="unwindToInitialVCWithSegue:" id="MRZ-OP-AF0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2C-N7-kUn">
+                                        <rect key="frame" x="0.0" y="70.5" width="343" height="30"/>
+                                        <state key="normal" title="Advance"/>
+                                        <connections>
+                                            <segue destination="Ih4-fg-jzP" kind="show" id="8Rw-mB-Ilq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i5V-Cs-nrJ" firstAttribute="centerY" secondItem="vGz-9t-i6v" secondAttribute="centerY" id="IvB-5a-Dpk"/>
+                            <constraint firstItem="i5V-Cs-nrJ" firstAttribute="leading" secondItem="nnx-8g-b7P" secondAttribute="leading" constant="16" id="Rcq-rg-5Vk"/>
+                            <constraint firstItem="nnx-8g-b7P" firstAttribute="trailing" secondItem="i5V-Cs-nrJ" secondAttribute="trailing" constant="16" id="gcL-bb-fos"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nnx-8g-b7P"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome Page" id="nBB-W3-0lh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kWI-cR-gF3">
+                            <connections>
+                                <segue destination="L6e-jP-Ahh" kind="unwind" unwindAction="unwindToInitialVCWithSegue:" id="fW7-zn-lkl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="OwW-w0-Ap9" id="5hu-xH-Jlh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIb-Ui-jDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="L6e-jP-Ahh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="-57"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="px0-pj-3bP">
+            <objects>
+                <viewController id="Ih4-fg-jzP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v81-vu-VwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="90w-5A-gSh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fx7-yG-u99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2278" y="-57"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AmW-TK-Ook">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cyo-V4-32s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="URL-7o-3S5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AZx-hJ-NqK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsi-hy-CND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="-73"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T9T-J2-u1a"/>
+    </inferredMetricsTieBreakers>
+</document>
